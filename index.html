@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Meta data -->
+	    <meta charset="utf-8" />
+	    <meta name="description" content="Surface Area and Volume of a Pentagonal Prism" />
+	    <meta name="keywords" content="immaculata, ics2o" />
+	    <meta name="author" content="Graeme" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Favicon -->
+	    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
+	    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
+	    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
+	    <link rel="manifest" href="./fav_index/site.webmanifest" />
+		<!-- Google MDL -->
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-pink.min.css" />
+		<!-- Css style sheet -->
+		<link rel="stylesheet" href="./css/style.css" />
+	    <title>Surface Area and Volume of a Pentagonal Prism</title>
+	</head>
+	<body>
+		<!-- Js file link -->
+	    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	    <script src="./js/script.js"></script>
+
+		<!-- MDL Header -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	    	<header class="mdl-layout__header">
+		        <div class="mdl-layout__header-row">
+		        	<span class="mdl-layout-title">Surface Area and Volume of a Pentagonal Prism</span>
+		        </div>
+	    	</header>
+				
+			<!--Images and Title -->
+			<center><h1>Surface Area and Volume of a Pentagonal Prism</h1>
+			<!-- MDL Table -->
+	    	<main class="mdl-layout__content">
+			    <table>
+			        <tr>
+						<th>
+							<img src="./images/diagram.jpg" width="100%"/>
+						</th>
+			            <th>
+							<img src="./images/surfaceArea.png" width="100%"/>
+						</th>
+						<th>
+							<img src="./images/volume.png" width="105%"/>
+						</th>
+					</tr>
+				</table>
+			
+				<!-- Info -->
+				<br>
+				<h5>Formulas for the surface area and volume of a pentagonal prism.</h5>
+				<br>
+				<h5>Fill out the text fields below and determine the surface area and volume of the pentagonal prism. Don't forget to put units!</h5>
+
+				<!-- MDL Table -->
+			    <table>
+			        <tr>
+			            <th>
+				            <!-- Side length Textfield -->
+							<br>
+							<form action="#">
+							    <h4>Side length (a):</h4>
+							    <div class="mdl-textfield mdl-js-textfield">
+							        <input
+							            class="mdl-textfield__input"
+							            type="text"
+							            pattern="-?[0-9]*(\.[0-9]+)?"
+							            id="radius-of-base"
+							        />
+							        <label class="mdl-textfield__label" for="radius-of-base">Ex: 5</label>
+							        <span class="mdl-textfield__error">Input is not a number!</span>
+							    </div>
+							</form>
+			            </th>
+			            <th>
+			              	<!-- Height Textfield -->
+							<br>
+							<form action="#">
+							    <h4>Height of the prism (h):</h4>
+							    <div class="mdl-textfield mdl-js-textfield">
+							        <input
+							            class="mdl-textfield__input"
+							            type="text"
+							            pattern="-?[0-9]*(\.[0-9]+)?"
+							            id="height-of-cone"
+							        />
+							        <label class="mdl-textfield__label" for="height-of-cone">Ex: 6.8</label>
+							        <span class="mdl-textfield__error">Input is not a number!</span>
+							    </div>
+							</form>
+			            </th>
+			        </tr>
+			    </table>
+	
+				<!-- Unit Textfield -->
+				<br>
+				<form action="#">
+					<h4>Unit of Measurement</h4>
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="text" id="unit">
+						<label class="mdl-textfield__label" for="unit">Ex: cm</label>
+					</div>
+				</form>
+	
+				<!-- Calculate Button for SA and volume -->
+				<br>
+			    <button
+			        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="answer()">
+			        Calculate
+			    </button>
+	
+				<!-- Div for answers -->
+			    <br>
+			    <p>
+			     <div id="answers">
+			        <div id="surface-area"></div>
+			        <div id="volume"></div>
+			     </div>
+			    </p>
+			</main>
+		</div>
+	</body>
+</html>
