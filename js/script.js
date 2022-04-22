@@ -17,13 +17,15 @@ function answer() {
 	
 	// If statement for unit of measurement (Van helped alot)
 	if (units === "mm" || units === "cm" || units === "dm" || units === "m" ||units === "dam" || units === "hm" || units === "km") {
-		//Answers
+		//Outputs SA and volume of a Pentagonal Prism
 		document.getElementById('surface-area').innerHTML = 'The surface area of the pentagonal prism is ' + surfaceArea.toFixed(2) + " " + units + "²";
 		document.getElementById('volume').innerHTML = 'The volume of the pentagonal prism is ' + volume.toFixed(2) + " " + units + "³";
 		document.getElementById('error').innerHTML = "";
 	} else {
 		//Error message if unit of measurement is invalid
 		document.getElementById('error').innerHTML = "The unit of measurement you chose is not valid. Pleaes enter one of the following: mm, cm, dm, m, dam, hm or km";
-	}
-	
+		document.getElementById('volume').innerHTML = ""
+		document.getElementById('surface-area').innerHTML = ""
+		
+	} 
 }

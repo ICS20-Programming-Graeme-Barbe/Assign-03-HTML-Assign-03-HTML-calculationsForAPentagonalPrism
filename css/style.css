@@ -1,0 +1,27 @@
+/* Created by: Graeme Barbe
+* Created on: April 22 2022
+* This CSS file defines the style for index.html
+*/
+
+.mdl-layout__header-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+html {
+height: 100%;
+}
+
+body {
+background-color: #08e1ae;
+background-image: linear-gradient(315deg, #08e1ae 0%, #98de5b 74%);
+}
+
+.mdl-textfield__input{
+    border-bottom: 1px solid #fff;
+}
+
+.mdl-textfield__label{
+    color: #fff;
+}
