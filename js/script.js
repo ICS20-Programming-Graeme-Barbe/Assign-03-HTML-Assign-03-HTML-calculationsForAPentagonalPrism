@@ -9,11 +9,21 @@ function answer() {
 	// Declares variables 
 	let sideA = parseFloat(document.getElementById('side-a').value)
 	let height = parseFloat(document.getElementById('height').value)
-	let unit = document.getElementById('unit').value
+	let units = document.getElementById('unit').value
 	//Calculates SA and volume
-	let surfaceArea = 5 * sideA * height + 1 / 2 * Math.sqrt(5(5 + 2 * Math.sqrt(5))) * (sideA ** 22)
-	let volume = 1 / 4 * Math.sqrt(5(5 + 2 * Math.sqrt(5))) * (sideA ** 2) * height
-	//Answers
-	document.getElementById('surface-area').innerHTML = 'The surface area of the pentagonal prism is ' + surfaceArea.toFixed(2) + " " + unit + "²"
-	document.getElementById('volume').innerHTML = 'The volume of the pentagonal prism is ' + volume.toFixed(2) + " " + unit + "³" 
+	let surfaceArea = 5 * sideA * height + 1 / 2 * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * (sideA ** 2)
+	let volume = 1 / 4 * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * (sideA ** 2) * height
+	
+	
+	// If statement for unit of measurement (Van helped alot)
+	if (units === "mm" || units === "cm" || units === "dm" || units === "m" ||units === "dam" || units === "hm" || units === "km") {
+		//Answers
+		document.getElementById('surface-area').innerHTML = 'The surface area of the pentagonal prism is ' + surfaceArea.toFixed(2) + " " + units + "²";
+		document.getElementById('volume').innerHTML = 'The volume of the pentagonal prism is ' + volume.toFixed(2) + " " + units + "³";
+		document.getElementById('error').innerHTML = "";
+	} else {
+		//Error message if unit of measurement is invalid
+		document.getElementById('error').innerHTML = "The unit of measurement you chose is not valid. Pleaes enter one of the following: mm, cm, dm, m, dam, hm or km";
+	}
+	
 }

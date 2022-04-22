@@ -69,6 +69,8 @@
 							            class="mdl-textfield__input"
 							            type="number"
 							            pattern="-?[0-9]*(\.[0-9]+)?"
+										step="any"
+										min="0"
 							            id="side-a"
 							        />
 							        <label class="mdl-textfield__label" for="side-a">Ex: 5</label>
@@ -86,6 +88,8 @@
 							            class="mdl-textfield__input"
 							            type="number"
 							            pattern="-?[0-9]*(\.[0-9]+)?"
+										step="any"
+										min="0"
 							            id="height"
 							        />
 							        <label class="mdl-textfield__label" for="height">Ex: 6.8</label>
@@ -119,6 +123,7 @@
 			     <div id="answers">
 			        <div id="surface-area"></div>
 			        <div id="volume"></div>
+					<div id="error"></div>
 			     </div>
 			    </p>
 			</main>
