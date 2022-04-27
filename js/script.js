@@ -16,7 +16,7 @@ function answer() {
 	
 	
 	// If statement for unit of measurement (Van helped a lot)
-	if (sideA != "" && height != " " && units != "")  {
+	if (sideA > 0 && height > 0 && units != "")  {
 		if (units === "mm" || units === "cm" || units === "dm" || units === "m" ||units === "dam" || units === "hm" || units === "km") {
 			document.getElementById('surface-area').innerHTML = 'The surface area of the pentagonal prism is ' + surfaceArea.toFixed(2) + " " + units + "²";
 			document.getElementById('volume').innerHTML = 'The volume of the pentagonal prism is ' + volume.toFixed(2) + " " + units + "³";
