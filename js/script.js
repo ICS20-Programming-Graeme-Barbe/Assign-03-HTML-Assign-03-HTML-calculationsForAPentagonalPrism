@@ -18,6 +18,7 @@ function answer() {
 	// If statement for unit of measurement (Van helped a lot)
 	if (sideA > 0 && height > 0 && units != "")  {
 		if (units === "mm" || units === "cm" || units === "dm" || units === "m" ||units === "dam" || units === "hm" || units === "km") {
+			//If everything is correct, output SA and volume
 			document.getElementById('surface-area').innerHTML = 'The surface area of the pentagonal prism is ' + surfaceArea.toFixed(2) + " " + units + "²";
 			document.getElementById('volume').innerHTML = 'The volume of the pentagonal prism is ' + volume.toFixed(2) + " " + units + "³";
 			document.getElementById('error').innerHTML = "";
@@ -28,6 +29,7 @@ function answer() {
 			document.getElementById('surface-area').innerHTML = ""
 		}
 	}	else {
+		//Error message if a text field was left blank
 		document.getElementById('error').innerHTML = "You need to fill in all the text fields to determine the surface area and volume.";
 		document.getElementById('volume').innerHTML = ""
 		document.getElementById('surface-area').innerHTML = ""
